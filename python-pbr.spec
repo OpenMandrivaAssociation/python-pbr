@@ -3,14 +3,14 @@
 %bcond_with docs
 
 Name:           python-%{srcname}
-Version:        5.4.5
-Release:        1
+Version:	5.5.1
+Release:	1
 Summary:        Python Build Reasonableness
 
 Group:          Development/Python
 License:        MIT
 URL:            https://pypi.python.org/pypi/pbr
-Source0:        https://files.pythonhosted.org/packages/source/p/pbr/%{srcname}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/65/e2/8cb5e718a3a63e8c22677fde5e3d8d18d12a551a1bbd4557217e38a97ad0/pbr-5.5.1.tar.gz
 
 BuildArch:      noarch
 %if %{with docs}
