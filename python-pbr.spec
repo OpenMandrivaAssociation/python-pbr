@@ -4,13 +4,13 @@
 
 Name:           python-%{srcname}
 Version:	5.5.1
-Release:	1
+Release:	2
 Summary:        Python Build Reasonableness
 
 Group:          Development/Python
 License:        MIT
 URL:            https://pypi.python.org/pypi/pbr
-Source0:	https://files.pythonhosted.org/packages/65/e2/8cb5e718a3a63e8c22677fde5e3d8d18d12a551a1bbd4557217e38a97ad0/pbr-5.5.1.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/p/pbr/pbr-%{version}.tar.gz
 
 BuildArch:      noarch
 %if %{with docs}
