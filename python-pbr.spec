@@ -2,23 +2,22 @@
 
 %bcond_with docs
 
-Name:           python-%{srcname}
+Name:		python-%{srcname}
 Version:	5.5.1
-Release:	2
-Summary:        Python Build Reasonableness
-
-Group:          Development/Python
-License:        MIT
-URL:            https://pypi.python.org/pypi/pbr
+Release:	3
+Summary:	Python Build Reasonableness
+Group:		Development/Python
+License:	MIT
+URL:		https://pypi.python.org/pypi/pbr
 Source0:	https://files.pythonhosted.org/packages/source/p/pbr/pbr-%{version}.tar.gz
 
-BuildArch:      noarch
+BuildArch:	noarch
 %if %{with docs}
-BuildRequires:  python3dist(sphinx)
-#BuildRequires:  python3dist(sphinx-rtd-theme)
+BuildRequires:	python3dist(sphinx)
+#BuildRequires:	python3dist(sphinx-rtd-theme)
 %endif
-BuildRequires:  pkgconfig(python)
-BuildRequires:  python3dist(setuptools)
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python3dist(setuptools)
 %{?python_provide:%python_provide python3-%{srcname}}
 
 %description
@@ -30,7 +29,7 @@ each with at least 3 active branches, it seems like a good time to
 make that code into a proper re-usable library.
 
 %prep
-%setup -q -n %{srcname}-%{version}
+%autosetup -n %{srcname}-%{version}
 
 # drop bundled egg-info
 rm -rf *.egg-info
