@@ -3,8 +3,8 @@
 %bcond_with docs
 
 Name:		python-%{srcname}
-Version:	5.5.1
-Release:	4
+Version:	6.0.0
+Release:	1
 Summary:	Python Build Reasonableness
 Group:		Development/Python
 License:	MIT
