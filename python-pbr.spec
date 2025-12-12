@@ -4,7 +4,7 @@
 
 Name:		python-%{srcname}
 Version:	6.1.0
-Release:	1
+Release:	2
 Summary:	Python Build Reasonableness
 Group:		Development/Python
 License:	MIT
