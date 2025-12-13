@@ -3,8 +3,8 @@
 %bcond_with docs
 
 Name:		python-%{srcname}
-Version:	6.1.0
-Release:	2
+Version:	7.0.3
+Release:	1
 Summary:	Python Build Reasonableness
 Group:		Development/Python
 License:	MIT
@@ -12,13 +12,12 @@ URL:		https://pypi.python.org/pypi/pbr
 Source0:	https://files.pythonhosted.org/packages/source/p/pbr/pbr-%{version}.tar.gz
 
 BuildArch:	noarch
+BuildSystem:	python
+BuildRequires:	python%{pyver}dist(setuptools)
 %if %{with docs}
-BuildRequires:	python3dist(sphinx)
+BuildRequires:	python%{pyver}dist(sphinx)
 #BuildRequires:	python3dist(sphinx-rtd-theme)
 %endif
-BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(setuptools)
-%{?python_provide:%python_provide python3-%{srcname}}
 
 %description
 PBR is a library that injects some useful and sensible default
@@ -28,23 +27,12 @@ projects. Around the time that OpenStack hit 18 different projects
 each with at least 3 active branches, it seems like a good time to
 make that code into a proper re-usable library.
 
-%prep
-%autosetup -n %{srcname}-%{version}
-
-# drop bundled egg-info
-rm -rf *.egg-info
-
-%build
-%py_build
-
+%build -a
 %if %{with docs}
 PYTHONPATH=$(pwd) sphinx-build doc/source html
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
 %endif
-
-%install
-%py_install
 
 %files
 %license LICENSE
