@@ -13,6 +13,7 @@ Source0:	https://files.pythonhosted.org/packages/source/p/pbr/pbr-%{version}.tar
 
 BuildArch:	noarch
 BuildSystem:	python
+BuildRequires:	make
 BuildRequires:	python%{pyver}dist(setuptools)
 %if %{with docs}
 BuildRequires:	python%{pyver}dist(sphinx)
