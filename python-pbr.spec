@@ -3,7 +3,7 @@
 %bcond_with docs
 
 Name:		python-%{srcname}
-Version:	7.0.3
+Version:	7.1.3
 Release:	1
 Summary:	Python Build Reasonableness
 Group:		Development/Python
